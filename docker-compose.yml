@@ -1,0 +1,13 @@
+services:
+  mongodb:
+    container_name: agent_db
+    image: mongo:latest
+    ports:
+      - "27015:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: abdurrab3263
+      MONGO_INITDB_ROOT_PASSWORD: Abdul63011
+      MONGO_INITDB_DATABASE: agent
+
+    volumes:
+      - ./data/mongo:/data/db
